@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title NODE CURD Application
+        link(rel="stylesheet", href="style.css")
+    body 
+        main 
+            form(action="/new-task", method="POST")
+                h1 Crud Application
+                input(type="text", name="newTask", placeholder="Add new task")
+                input(type="submit", value="Add")
+            ul 
+                each tasks in data
+                    li 
+                        div= tasks.id
+                        div= tasks.task
+                        div 
+                            form(action=`/update-task?id=${tasks.id}`, method="POST")
+                                input(type="text", name="updateTask", placeholder="Update task")
+                                input(type="submit", value="Submit")
+                        div 
+                            form(action=`/delete-task?id=${tasks.id}`, method="POST")  
+                                input(type="submit", value="Delete") 

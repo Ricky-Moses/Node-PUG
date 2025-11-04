@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+main {
+  border: solid;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+main h1 {
+  font-variant: small-caps;
+}
+
+main > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+main > form input[type="text"] {
+  width: 80%;
+  height: 5vh;
+  padding: 0 10px;
+}
+
+main > form input[type="submit"] {
+  width: 100px;
+  height: 5vh;
+  border: none;
+  outline: solid 1px #000;
+  color: #000;
+  background-color: #fff;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: cell;
+}
+
+main > form input[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+ul {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  height: 70vh;
+  overflow-y: auto;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 80%;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+ul li div:nth-child(2) {
+  flex: 2;
+  text-align: center;
+}
+
+ul li div:nth-child(3) {
+  flex: 2;
+}
+
+ul li div:nth-child(3) form {
+  display: flex;
+  align-items: center;
+}
+
+ul li div:nth-child(3) form input[type="text"] {
+  flex: 1;
+  height: 4vh;
+  padding: 0 10px;
+  outline: solid 1px aquamarine;
+  border: none;
+}
+
+ul li div:nth-child(3) form input[type="text"]:focus {
+  outline: none;
+}
+
+ul li div:nth-child(3) form input[type="submit"] {
+  height: 4vh;
+  padding: 0 10px;
+  outline: solid 1px aquamarine;
+  border: none;
+  background-color: aqua;
+  color: #000;
+}
+
+ul li div:nth-child(4) {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+ul li div:nth-child(4) form input {
+  width: 100px;
+  height: 4vh;
+  color: orangered;
+  outline: solid 1px orangered;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+ul li div:nth-child(4) form input:hover {
+  background-color: orangered;
+  color: #fff;
+}
+
+@media (max-width: 600px){
+  main > form input[type="text"], main ul li{
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  ul li div:nth-child(4) form input{
+    width: 60px;
+  }
+}
